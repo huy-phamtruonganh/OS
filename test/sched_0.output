@@ -1,0 +1,68 @@
+Time slot   0
+Loader started
+	Loaded process input/proc/s0 (PID: 1 PRIO: 4)
+Time slot   1
+	CPU 0: Running process  1
+Time slot   2
+Time slot   3
+	CPU 0: Requeuing process  1
+	CPU 0: Running process  1
+===== POST-ALLOCATION MEMORY =====
+PID=1 - Region=4 - Addr=00000200 - Size=300
+print_pgtbl: 0 - 1024
+00000000: 00000000
+00000004: 00000000
+00000008: 00000000
+00000012: 00000000
+==================================
+Time slot   4
+	Loaded process input/proc/s1 (PID: 2 PRIO: 0)
+Time slot   5
+	CPU 0: Requeuing process  1
+	CPU 0: Running process  2
+Time slot   6
+Time slot   7
+	CPU 0: Requeuing process  2
+	CPU 0: Running process  2
+Time slot   8
+Time slot   9
+	CPU 0: Requeuing process  2
+	CPU 0: Running process  2
+Time slot  10
+Time slot  11
+	CPU 0: Requeuing process  2
+	CPU 0: Running process  2
+Time slot  12
+	CPU 0: Process  2 finished
+===== PHYSICAL MEMORY AFTER DEALLOCATION =====
+PID=2 - Region=0
+print_pgtbl: 0 - 0
+============================================
+	CPU 0: Running process  1
+Time slot  13
+Time slot  14
+	CPU 0: Requeuing process  1
+	CPU 0: Running process  1
+Time slot  15
+Time slot  16
+	CPU 0: Requeuing process  1
+	CPU 0: Running process  1
+Time slot  17
+Time slot  18
+	CPU 0: Requeuing process  1
+	CPU 0: Running process  1
+Time slot  19
+Time slot  20
+	CPU 0: Requeuing process  1
+	CPU 0: Running process  1
+Time slot  21
+Time slot  22
+	CPU 0: Requeuing process  1
+	CPU 0: Running process  1
+Time slot  23
+	CPU 0: Process  1 finished
+===== PHYSICAL MEMORY AFTER DEALLOCATION =====
+PID=1 - Region=0
+print_pgtbl: 0 - 0
+============================================
+	CPU 0 stopped
