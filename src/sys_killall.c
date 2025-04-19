@@ -19,7 +19,7 @@
 int __sys_killall(struct pcb_t *caller, struct sc_regs* regs)
 {
     char proc_name[100];
-    BYTE data;
+    uint32_t data;
 
     //hardcode for demo only
     uint32_t memrg = regs->a1;
@@ -27,6 +27,7 @@ int __sys_killall(struct pcb_t *caller, struct sc_regs* regs)
     /* TODO: Get name of the target proc */
     int i = 0;
     do {
+        int temp = i;
         if (i >= 99) {
             proc_name[i] = '\0'; // Ensure null-termination
             break;
@@ -36,7 +37,7 @@ int __sys_killall(struct pcb_t *caller, struct sc_regs* regs)
             break; // Error reading memory
         }
         proc_name[i] = (char)data;
-        i++;
+        i = temp + 1;
     } while(data != '\0' && data != 0xFF);
     proc_name[i] = '\0'; // Ensure null-termination
     printf("The procname retrieved from memregionid %d is \"%s\"\n", memrg, proc_name);
